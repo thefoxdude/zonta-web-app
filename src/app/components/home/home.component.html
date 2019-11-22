@@ -1,0 +1,106 @@
+<mdb-carousel [animation]="'slide'">
+   <mdb-carousel-item>
+     <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+   </mdb-carousel-item>
+   <mdb-carousel-item>
+     <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+   </mdb-carousel-item>
+   <mdb-carousel-item>
+     <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+   </mdb-carousel-item>
+</mdb-carousel><br /><br />
+
+<div class="w3-container">
+   <div class="w3-row home-columns">
+      <div class="w3-col m4 s12 home-column" routerLink="../event-calendar">
+         <div class="w3-container home-icon-container">
+            <div class="circle-icon" style="background-image: url(../../assets/flower.png)"></div>
+            <h4>About Us</h4>
+         </div>
+         <p>
+            Zonta Club of Porterville, founded in 1948, is a member of Zonta International, 
+            a worldwide service organization of members working together to advance the status of 
+            women through service and advocacy. Over the past 10 years, our club has donated over 
+            $160,000 toward community, international service projects and scholarships in 
+            addition to thousands of hours towards hands-on projects.
+         </p>
+         <span class="home-link">Read More</span>
+      </div>
+      <div class="w3-col m4 s12">
+         <div class="w3-container home-icon-container">
+            <div class="circle-icon" style="background-image: url(../../assets/Zonta-logo.png)"></div>
+            <h4>Zonta Club Membership</h4>
+         </div>
+         <p>
+            If you would like to join us in this important work, Zonta Club membership may be for you. 
+            By joining forces with like-minded women and men, your voice, service and contributions can 
+            make a lasting and meaningful impact on women’s lives everywhere.
+         </p>
+         <span class="home-link">Join Us</span>
+      </div>
+      <div class="w3-col m4 s12">
+         <div class="w3-container home-icon-container">
+            <div class="circle-icon" style="background-image: url(../../assets/DonateIcon.png)"></div>
+            <h4>Donate</h4>
+         </div>
+         <p>
+            Zonta Club of Porterville has a 501c3 organization, Porterville Zonta Foundation. 
+            The fund’s primary purpose is to provide scholarships and fund service project that advance 
+            the status of women in the local Porterville area, including the Central Family Crisis Center. 
+            You can also benefit the Porterville Zonta Foundation by attending An Evening of Art & 
+            Wine and the Zonta Christmas Home Tour.
+         </p>
+         <span class="home-link">Donate Now</span>
+      </div>
+   </div>
+</div>
+
+<div class="w3-container middle-section">
+   <div class="w3-container">
+      <h3>THE ZONTA CODE</h3>
+   </div>
+   <div class="w3-contianer">
+      <p>
+         To pledge myself to uphold and practice the ideals of Zonta To honor my work and consider it an 
+         opportunity for service To increase the measure of that service by consistent self-improvement. 
+         To contribute by study and action to the improvement of the legal, political, economic, and professional 
+         status of women. To work for the advancement of understanding, good will and peace through a world 
+         fellowship of executive women in business and the professions united in the Zonta ideal of service. 
+         To keep ever before me the best of all creeds: "Whatsoever ye would that men should do u nto you, do ye even unto them."
+      </p>
+   </div>
+   <div class="w3-container">
+      <h3>ZONTA CLUB OF PORTERVILLE MISSION STATEMENT</h3>
+   </div>
+   <div class="w3-contianer">
+      <p>
+         "To improve the status of women by helping them develop their utmost potential through 
+         education, mentor programs, and leadership in the community."
+      </p>
+   </div>
+</div>
+
+<div class="w3-row" style="padding: 20px;">
+   <div class="w3-col s12">
+      <div class="w3-container w3-display-container" style="min-height: 150px;">
+         <button type="button" mdbBtn mdbWavesEffect class="w3-display-middle w3-round-xlarge zonta-red">Newsletter Link</button>
+      </div>
+
+      <div class="w3-container" style="text-align: center;">
+         <h3>Member Testimonial</h3>
+         <div class="iframe-container">
+            <iframe class="iframe" src="https://www.youtube.com/embed/QnUPJu4zqOc"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
+      </div><br /><br />
+      <div class="w3-container w3-display-container" style="min-height: 150px;">
+         <button type="button" mdbBtn mdbWavesEffect class="w3-display-middle w3-round-xlarge zonta-red">Donate Now</button>
+      </div>
+
+      <div class="w3-container">
+         <app-event-calendar-small></app-event-calendar-small>
+      </div>
+
+      <button type="button" mdbBtn color="info" mdbWavesEffect class="w3-right" routerLink="../event-calendar">View Calendar</button>
+   </div>
+</div>

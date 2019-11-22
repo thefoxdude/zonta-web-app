@@ -1,0 +1,23 @@
+<h3>Next 2 Events</h3>
+<ul style="list-style: none; padding-inline-start: 0px;">
+   <li *ngFor="let event of smallEvents; let i = index" class="w3-card event-card" style="margin: 15px;" (click)="expand(event.id)">
+      <div class="w3-container w3-cell cal-day-box" style="text-align: center; padding: 15px 8px;" [class.zonta-red]="i % 2 == 0" [class.w3-dark-gray]="i % 2 == 1">
+         <h1 style="margin-bottom: -10px; font-size: 5em; font-weight: 300;">{{event.day}}</h1>
+         <h2 style="margin-top: -10px; font-weight: 600;">{{event.month}}</h2>
+      </div>
+      <div class="w3-container w3-cell" style="padding: 15px; width: 100%; position: relative;">
+         <h2 style="text-align: center !important; margin-top: 15px;">{{event.name}}</h2>
+         <mdb-icon fas icon="plus-circle" size="2x" style="position: absolute; top: 5px; right: 5px;" *ngIf="!eventIdToExpanded[event.id]"></mdb-icon>
+         <mdb-icon fas icon="minus-circle" size="2x" style="position: absolute; top: 5px; right: 5px;" *ngIf="eventIdToExpanded[event.id]"></mdb-icon>
+         <div class="w3-container" *ngIf="eventIdToExpanded[event.id]" style="text-align: left;">
+            <p *ngIf="event.location"><mdb-icon fas icon="map-marker"></mdb-icon> {{event.location}}</p>
+            <p *ngIf="event.contact"><mdb-icon fas icon="user"></mdb-icon> {{event.contact}}</p>
+            <p *ngIf="event.phone"><mdb-icon fas icon="phone"></mdb-icon> {{event.phone}}</p>
+            <p *ngIf="event.cost"><mdb-icon fas icon="dollar-sign"></mdb-icon> {{event.cost}}</p>
+            <mdb-icon fas icon="comment" style="float: left; margin-right: 5px; position: relative; top: 4px;" *ngIf="event.details"></mdb-icon>
+            <pre *ngIf="event.details">{{event.details}}</pre>
+            <img *ngIf="event.flyer" src={{event.flyer}}>
+         </div>
+      </div>
+   </li>
+</ul><br /><br />
