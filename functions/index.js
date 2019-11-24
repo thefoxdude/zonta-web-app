@@ -1,7 +1,11 @@
 var functions = require('firebase-functions');
+const express = require('express');
+const app = express();
 
+const cors = require('cors')({origin: true});
 const admin = require('firebase-admin');
 admin.initializeApp();
+app.use(cors);
 
 const sendgrid = require('sendgrid');
 const SENDGRID_API_KEY = functions.config().sendgrid.key;
@@ -17,34 +21,39 @@ function parseBody(body) {
   return  mail.toJSON();
 }
 
+app.post('/v3/mail/send', (req, res) => {
+  res.end("Received POST request!");  
+});
 
-exports.httpEmail = functions.https.onRequest((req, res) => {
-  return Promise.resolve()
-    .then(() => {
-
-
-      const request = client.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: parseBody(req.body)
-      });
-
-      return client.API(request)
+// app.onRequest((req, res) => {
+//   cors(req, res, () => {
+//     return Promise.resolve()
+//     .then(() => {
 
 
-    })
-    .then((response) => {
-      if (response.body) {
-        res.send(response.body);
-      } else {
-        res.end();
-      }
-    })
+//       const request = client.emptyRequest({
+//         method: 'POST',
+//         path: '/v3/mail/send',
+//         body: ''
+//       });
 
-    .catch((err) => {
-      console.error(err);
-      return Promise.reject(err);
-    });
+//       return client.API(request)
 
 
-})
+//     })
+//     .then((response) => {
+//       if (response.body) {
+//         res.send(response.body);
+//       } else {
+//         res.end();
+//       }
+//     })
+
+//     .catch((err) => {
+//       console.error(err);
+//       return Promise.reject(err);
+//     });
+//   })
+// });
+
+exports.app = functions.https.onRequest(app);

@@ -36,7 +36,7 @@ export class ContactUsComponent {
 
       let url = `https://us-central1-zonta-web-app.cloudfunctions.net/httpEmail`
       let params: URLSearchParams = new URLSearchParams();
-      let headers = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+      let headers = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'});
 
       params.set('to', 'danielfox400@gmail.com');
       params.set('from', email);
