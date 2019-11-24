@@ -38,15 +38,20 @@ export class ContactUsComponent {
       let params: URLSearchParams = new URLSearchParams();
       let headers = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'});
 
-      params.set('to', 'danielfox400@gmail.com');
-      params.set('from', email);
-      params.set('subject', 'zonta from: ' + name);
-      params.set('content', message);
+      // params.set('to', 'danielfox400@gmail.com');
+      // params.set('from', email);
+      // params.set('subject', 'zonta from: ' + name);
+      // params.set('content', message);
 
-      return this.http.post(url, params, { headers: headers })
-                     .subscribe( result => {
-                        console.log(result);
-                     });
+      const data = {
+         toEmail: 'hello@jeffdelaney.me',
+         toName: 'Jeff Delaney'
+      }
+
+      this.http.post(url, data, { headers: headers })
+         .subscribe( result => {
+            console.log(result);
+         });
 
    }
 
