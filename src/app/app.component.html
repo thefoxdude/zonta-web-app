@@ -27,15 +27,34 @@
          <button class="w3-button MenuButton">ABOUT US</button>
          <div class="w3-dropdown-content w3-bar-block w3-card-4 MenuDropdownContent">
             <a routerLink="contact-us" class="w3-bar-item w3-button MenuButton2">Contact Us</a>
+            <a routerLink="join-us" class="w3-bar-item w3-button MenuButton2">Join Us</a>
          </div>
       </div>
       <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium MenuButton" (click)="showMobileMenu()">&#9776;</a>
    </div>
-   <div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium Menu">
-      <a href="" class="w3-bar-item w3-button MenuButton">CLUB ADVOCACY</a>
-      <a href="" class="w3-bar-item w3-button MenuButton">CLUB EVENTS</a>
-      <a href="" class="w3-bar-item w3-button MenuButton">MEMBERSHIP</a>
-      <a href="" class="w3-bar-item w3-button MenuButton">ABOUT US</a>
+   <div class="topnav w3-hide-medium w3-hide-large" id="myTopnav">
+      <div class="dropdown">
+         <button class="dropbtn">CLUB SERVICES <i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-content">
+            <a routerLink="scholarships" class="w3-bar-item w3-button MenuButton2">SCHOLARSHIPS</a>
+            <a routerLink="bosom-buddies" class="w3-bar-item w3-button MenuButton2">BOSOM BUDDIES PROJECT</a>
+            <a routerLink="/services/scholarships" class="w3-bar-item w3-button MenuButton2">Z CLUBS</a>
+         </div>
+      </div>
+      <div class="dropdown">
+         <button class="dropbtn">CLUB EVENTS <i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-content">
+            <a routerLink="event-calendar" class="w3-bar-item w3-button MenuButton2">Event Calendar</a>
+         </div>
+      </div>
+      <a href="">MEMBERSHIP</a>
+      <div class="dropdown">
+         <button class="dropbtn">ABOUT US <i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-content">
+            <a routerLink="contact-us" class="w3-bar-item w3-button MenuButton2">Contact Us</a>
+            <a routerLink="join-us" class="w3-bar-item w3-button MenuButton2">Join Us</a>
+         </div>
+      </div>
    </div>
    <div id="bodyContainer">
       <router-outlet></router-outlet>

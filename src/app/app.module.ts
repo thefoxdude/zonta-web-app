@@ -15,6 +15,7 @@ import { ContactUsComponent } from './components/about-us/contact-us/contact-us.
 import { ContactService } from './core/services/contact.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
+import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,8 @@ import { FormBuilder } from '@angular/forms';
       SidebarComponent,
       EventCalendarSmallComponent,
       BosomBuddiesComponent,
-      ContactUsComponent
+      ContactUsComponent,
+      JoinUsComponent
    ],
    imports: [
       BrowserModule,

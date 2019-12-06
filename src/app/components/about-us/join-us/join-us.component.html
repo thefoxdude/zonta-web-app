@@ -1,0 +1,88 @@
+<div class="w3-container">
+   <div class="w3-row" style="padding: 20px; max-width: 900px; margin: auto;">
+      <div class="w3-col s12" style="text-align: center">
+         <h1>Join Us</h1>
+      </div>
+      <div class="w3-col m6 s12 zonta-column">
+         <div style="width: 100%; text-align: center">
+            <h3>Zonta Membership</h3>
+         </div>
+         <p>
+            As a member of Zonta, you will advance the status of women through service, advocacy and awareness. 
+            You will work make a difference in the lives of women and girls in Santa Clarita and beyond through 
+            our service projects, scholarships and grants. While doing these activities, you will build 
+            relationships in this community and beyond that will last a lifetime.
+         </p>
+         <p>
+            Zonta membership provides the opportunity to:
+         </p>
+         <ul>
+            <li>
+               Socialize and network locally, nationally and internationally with experienced, 
+               involved professionals working in many different fields, who seek to help women reach their potential.
+            </li>
+            <li>
+               Work together, through service and advocacy, towards common goals, i.e., the objectives of Zonta.
+            </li>
+         </ul>
+      </div>
+      <div class="w3-col m6 s12 zonta-column">
+         <div style="width: 100%; text-align: center">
+            <h3>Become a Member</h3>
+         </div>
+         <p>
+            The Zonta Club of Santa Clarita Valley is always seeking new members who are willing to 
+            support and implement the Mission and Objects of Zonta International.
+         </p>
+         <p>
+            Fill out this form to find out more about becoming a member
+         </p>
+         <form [formGroup]="angForm" novalidate>
+            <div class="message">
+            <h3> Write to us </h3>
+            </div>
+            <div class="form__top">
+            <div class="form__left">
+               <div class="form__group">
+                  <input class="form__input form__input--name" type="text"   formControlName="name" placeholder="name" #name>
+               </div>
+               <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['name'].errors.required">
+                  Name is required.
+                  </div>
+               </div>
+               <div class="form__group">
+                  <input class="form__input form__input--email" type="email"  formControlName="email" placeholder="email" #email>
+               </div>
+               <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="angForm.controls['message'].errors.required">
+                  message is required.
+                  </div>
+               </div>
+            </div>
+            <div class="form__right">
+               <div class="form__group">
+                  <textarea class="form__input form__input--textarea" placeholder="Message" formControlName="message"  #message
+                  rows="3"></textarea>
+               </div>
+               <div *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="angForm.controls['message'].errors.required">
+                  message is required.
+                  </div>
+               </div>
+            </div>
+            </div>
+            <flash-messages></flash-messages>
+            <div class="form__down">
+            <div class="form__group">
+               <button (click)="sendMail(name.value, email.value, message.value)"  class="form__input form__input--submit" name="submit" type="button" value="SEND MESSAGE">SEND MESSAGE
+               </button>
+            </div>
+            </div>
+
+         </form>
+      </div><br /><br />
+   </div>
+</div>
