@@ -5,25 +5,34 @@
       </a>
    </div>
    <div class="w3-bar Menu">
-      <a routerLink="/home" class="w3-bar-item w3-button MenuButton">HOME</a>
+      <button routerLink="/home" class="w3-bar-item w3-button MenuButton menu-button-container">HOME</button>
       <!-- <a routerLink="/services/scholarships" class="w3-bar-item w3-button MenuButton">CLUB SERVICES</a> -->
-      <div class="w3-dropdown-hover w3-hide-small">
-         <button class="w3-button MenuButton">CLUB SERVICES</button>
+      <div class="w3-dropdown-hover w3-hide-small menu-button-container">
+         <button class="w3-button MenuButton">SERVICES</button>
          <div class="w3-dropdown-content w3-bar-block w3-card-4 MenuDropdownContent">
             <a routerLink="scholarships" class="w3-bar-item w3-button MenuButton2">SCHOLARSHIPS</a>
-            <a routerLink="bosom-buddies" class="w3-bar-item w3-button MenuButton2">BOSOM BUDDIES PROJECT</a>
+            <!-- <a routerLink="bosom-buddies" class="w3-bar-item w3-button MenuButton2">BOSOM BUDDIES PROJECT</a> -->
             <a routerLink="/services/scholarships" class="w3-bar-item w3-button MenuButton2">Z CLUBS</a>
          </div>
       </div>
-      <a href="" class="w3-bar-item w3-button MenuButton w3-hide-small">CLUB ADVOCACY</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-         <button class="w3-button MenuButton">CLUB EVENTS</button>
+      <div class="w3-dropdown-hover w3-hide-small menu-button-container">
+         <button class="w3-button MenuButton">ADVOCACY</button>
+         <div class="w3-dropdown-content w3-bar-block w3-card-4 MenuDropdownContent">
+            <a routerLink="united-nations" class="w3-bar-item w3-button MenuButton2">UNITED NATIONS</a>
+            <a routerLink="anti-domestic-violence" class="w3-bar-item w3-button MenuButton2">ANTI-DOMESTIC VIOLENCE</a>
+            <a routerLink="end-child-marriage" class="w3-bar-item w3-button MenuButton2">END CHILD MARRIAGE</a>
+            <a routerLink="zonta-says-no" class="w3-bar-item w3-button MenuButton2">ZONTA SAYS NO!</a>
+            <a routerLink="era" class="w3-bar-item w3-button MenuButton2">ERA</a>
+         </div>
+      </div>
+      <!-- <a href="" class="w3-bar-item w3-button MenuButton w3-hide-small">CLUB ADVOCACY</a> -->
+      <div class="w3-dropdown-hover w3-hide-small menu-button-container">
+         <button class="w3-button MenuButton">EVENTS</button>
          <div class="w3-dropdown-content w3-bar-block w3-card-4 MenuDropdownContent">
             <a routerLink="event-calendar" class="w3-bar-item w3-button MenuButton2">Event Calendar</a>
          </div>
       </div>
-      <a href="" class="w3-bar-item w3-button MenuButton w3-hide-small">MEMBERSHIP</a>
-      <div class="w3-dropdown-hover w3-hide-small">
+      <div class="w3-dropdown-hover w3-hide-small menu-button-container">
          <button class="w3-button MenuButton">ABOUT US</button>
          <div class="w3-dropdown-content w3-bar-block w3-card-4 MenuDropdownContent">
             <a routerLink="contact-us" class="w3-bar-item w3-button MenuButton2">Contact Us</a>
@@ -47,7 +56,6 @@
             <a routerLink="event-calendar" class="w3-bar-item w3-button MenuButton2">Event Calendar</a>
          </div>
       </div>
-      <a href="">MEMBERSHIP</a>
       <div class="dropdown">
          <button class="dropbtn">ABOUT US <i class="fa fa-caret-down"></i></button>
          <div class="dropdown-content">
@@ -59,14 +67,4 @@
    <div id="bodyContainer">
       <router-outlet></router-outlet>
    </div>
-   <!-- <div id="bodyContainer" *ngIf="!isHome">
-      <div class="w3-row">
-         <div class="w3-col s12 m8">
-            <router-outlet></router-outlet>
-         </div>
-         <div class="w3-col m4 w3-hide-small">
-            <app-sidebar></app-sidebar>
-         </div>
-      </div>
-   </div> -->
 </div>

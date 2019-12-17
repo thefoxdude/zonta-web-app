@@ -1,46 +1,85 @@
-<form [formGroup]="angForm" novalidate>
+<form [formGroup]="angForm" novalidate class="w3-container" style="padding: 40px;">
    <div class="message">
-     <h3> Write to us </h3>
+   <h3> CONTACT US </h3>
    </div>
+   <div class="w3-row">
+      <div class="w3-col s1"><p><strong>Email:</strong></p></div>
+      <div class="w3-col s6">
+         <p><a href="mailto:riversidezonta@gmail.com">riversidezonta@gmail.com</a></p>
+      </div>
+   </div>
+   <div class="w3-row">
+      <div class="w3-col s1"><p><strong>Phone:</strong></p></div>
+      <div class="w3-col s6">
+         <p>951-201-8702</p>
+      </div>
+   </div>
+   <div class="w3-row">
+      <div class="w3-col s1"><p><strong>Address:</strong></p></div>
+      <div class="w3-col s6">
+         <p>Zonta Club of Riverside<br />122 Bracebridge Road<br />Riverside, CA  92506</p>
+      </div>
+   </div>
+   <div class="w3-row">
+      <div class="w3-col s1"><p><strong>Facebook:</strong></p></div>
+      <div class="w3-col s6">
+         <p><a href="https://www.facebook.com/ZontaRiverside/" target="_blank" style="color: lightblue; text-decoration: underline;">Zonta Club Riverside</a></p>
+      </div>
+   </div>
+   <p>Please fill out the following form if you have any questions or need more information</p>
    <div class="form__top">
-     <div class="form__left">
-       <div class="form__group">
-         <input class="form__input form__input--name" type="text"   formControlName="name" placeholder="name" #name>
-       </div>
-       <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
-         <div *ngIf="angForm.controls['name'].errors.required">
-           Name is required.
+   <div class="form__left">
+      <div class="form-container">
+         <div class="form__group">
+            <input class="form__input form__input--name" type="text" formControlName="name" placeholder="Your Name" #name>
          </div>
-       </div>
-       <div class="form__group">
-         <input class="form__input form__input--email" type="email"  formControlName="email" placeholder="email" #email>
-       </div>
-       <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+         <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['name'].errors.required">
+            Name is required.
+            </div>
+         </div>
+      </div>
+      <div class="form-container">
+         <div class="form__group">
+            <input class="form__input form__input--email" type="email" formControlName="email" placeholder="Your Email" #email>
+         </div>
+         <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angForm.controls['message'].errors.required">
+            Email is required.
+            </div>
+         </div>
+      </div>
+      <div class="form-container">
+         <div class="form__group">
+            <input class="form__input form__input--phone" type="phone"  formControlName="phone" placeholder="Phone" #phone>
+         </div>
+      </div>
+      <div class="form-container">
+         <div class="form__group">
+            <input class="form__input form__input--subject"  formControlName="subject" placeholder="Subject" #subject>
+         </div>
+      </div>
+   </div>
+   <div class="form__right">
+      <div class="form__group">
+         <textarea class="form__input form__input--textarea" placeholder="Your Message" formControlName="message"  #message
+         rows="3"></textarea>
+      </div>
+      <div *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
          class="alert alert-danger">
          <div *ngIf="angForm.controls['message'].errors.required">
-           message is required.
+         message is required.
          </div>
-       </div>
-     </div>
-     <div class="form__right">
-       <div class="form__group">
-         <textarea class="form__input form__input--textarea" placeholder="Message" formControlName="message"  #message
-           rows="3"></textarea>
-       </div>
-       <div *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
-         class="alert alert-danger">
-         <div *ngIf="angForm.controls['message'].errors.required">
-           message is required.
-         </div>
-       </div>
-     </div>
+      </div>
+   </div>
    </div>
    <flash-messages></flash-messages>
    <div class="form__down">
-     <div class="form__group">
-       <button (click)="sendMail(name.value, email.value, message.value)"  class="form__input form__input--submit" name="submit" type="button" value="SEND MESSAGE">SEND MESSAGE
-       </button>
-     </div>
+   <div class="form__group">
+      <button (click)="sendMail(name.value, email.value, phone.value, subject.value, message.value)"  class="form__input form__input--submit" name="submit" type="button" value="SEND MESSAGE">SEND MESSAGE
+      </button>
+   </div>
    </div>
 
- </form>
+</form>

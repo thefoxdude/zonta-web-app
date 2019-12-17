@@ -13,12 +13,13 @@
                <mdb-icon fas icon="minus-circle" size="2x" style="position: absolute; top: 5px; right: 5px;" *ngIf="eventIdToExpanded[event.id]"></mdb-icon>
                <div class="w3-container" *ngIf="eventIdToExpanded[event.id]" style="text-align: left;">
                   <p *ngIf="event.location"><mdb-icon fas icon="map-marker"></mdb-icon> {{event.location}}</p>
+                  <p *ngIf="event.detailDateTime"><mdb-icon fas icon="clock"></mdb-icon> {{event.detailDateTime}}</p>
                   <p *ngIf="event.contact"><mdb-icon fas icon="user"></mdb-icon> {{event.contact}}</p>
                   <p *ngIf="event.phone"><mdb-icon fas icon="phone"></mdb-icon> {{event.phone}}</p>
                   <p *ngIf="event.cost"><mdb-icon fas icon="dollar-sign"></mdb-icon> {{event.cost}}</p>
                   <mdb-icon fas icon="comment" style="float: left; margin-right: 5px; position: relative; top: 4px;" *ngIf="event.details"></mdb-icon>
                   <pre *ngIf="event.details">{{event.details}}</pre>
-                  <img *ngIf="event.flyer" src={{event.flyer}}>
+                  <img *ngIf="event.flyer" src={{event.flyer}} style="width: 100%;">
                </div>
             </div>
          </li>

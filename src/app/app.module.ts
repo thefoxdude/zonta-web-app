@@ -16,6 +16,7 @@ import { ContactService } from './core/services/contact.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
+import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 
 @NgModule({
    declarations: [
@@ -27,7 +28,8 @@ import { JoinUsComponent } from './components/about-us/join-us/join-us.component
       EventCalendarSmallComponent,
       BosomBuddiesComponent,
       ContactUsComponent,
-      JoinUsComponent
+      JoinUsComponent,
+      UnitedNationsComponent
    ],
    imports: [
       BrowserModule,

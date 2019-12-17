@@ -6,6 +6,7 @@ import { EventCalendarComponent } from './components/club-events/event-calendar/
 import { BosomBuddiesComponent } from './components/club-services/bosom-buddies/bosom-buddies.component';
 import { ContactUsComponent } from './components/about-us/contact-us/contact-us.component';
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
+import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 
 const routes: Routes = [
 
@@ -15,7 +16,8 @@ const routes: Routes = [
    { path: 'event-calendar', component: EventCalendarComponent },
    { path: 'bosom-buddies', component: BosomBuddiesComponent },
    { path: 'contact-us', component: ContactUsComponent },
-   { path: 'join-us', component: JoinUsComponent }
+   { path: 'join-us', component: JoinUsComponent },
+   { path: 'united-nations', component: UnitedNationsComponent }
 ];
 
 @NgModule({

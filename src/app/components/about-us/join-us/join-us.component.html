@@ -9,7 +9,7 @@
          </div>
          <p>
             As a member of Zonta, you will advance the status of women through service, advocacy and awareness. 
-            You will work make a difference in the lives of women and girls in Santa Clarita and beyond through 
+            You will work make a difference in the lives of women and girls in Riverside and beyond through 
             our service projects, scholarships and grants. While doing these activities, you will build 
             relationships in this community and beyond that will last a lifetime.
          </p>
@@ -24,64 +24,107 @@
             <li>
                Work together, through service and advocacy, towards common goals, i.e., the objectives of Zonta.
             </li>
+            <li>
+               Want to meet interesting, involved persons who seek to help women reach their potential.
+            </li>
+            <li>
+               Experience the warmth of international fellowship. Members are welcomed at Zonta clubs worldwide.
+            </li>
+            <li>
+               Develop leadership skills and promote personal growth and self-confidence by participating actively in 
+               committees and accepting leadership roles on boards in a friendly, supportive atmosphere. 
+            </li>
          </ul>
       </div>
+      <div class="w3-col m6 s12 zonta-column">
+         <div style="width: 100%; text-align: center">
+            <h3>Membership Responsibilities</h3>
+         </div>
+         <ul>
+            <li>
+               Pay all dues, fees and assessments promptly.
+            </li>
+            <li>
+               Attend club and club events.
+            </li>
+            <li>
+               Participate actively in meetings and deliberations and accept majority decisions.
+            </li>
+            <li>
+               Contribute to fundraising events (sell and/or purchase tickets, work, provide food items as requested).
+            </li>
+            <li>
+               Socialize, enjoy networking, and contribute to enhancing the status of women locally, nationally, and world-wide.
+            </li>
+            <li>
+               Accept leadership roles and give time, talent and enthusiasm to the organization.
+            </li>
+            <li>
+               Identify and suggest prospective new members.
+            </li>
+            <li>
+               For more information email <a href="mailto: riversidezonta@gmail.com" style="text-decoration: underline;">riversidezonta@gmail.com</a> or call (951) 201-8702
+            </li>
+         </ul>
+      </div>
+   </div>
+   <div class="w3-row" style="padding: 20px; max-width: 900px; margin: auto;">
       <div class="w3-col m6 s12 zonta-column">
          <div style="width: 100%; text-align: center">
             <h3>Become a Member</h3>
          </div>
          <p>
-            The Zonta Club of Santa Clarita Valley is always seeking new members who are willing to 
+            The Zonta Club of Riverside is always seeking new members who are willing to 
             support and implement the Mission and Objects of Zonta International.
          </p>
          <p>
             Fill out this form to find out more about becoming a member
          </p>
-         <form [formGroup]="angForm" novalidate>
-            <div class="message">
-            <h3> Write to us </h3>
-            </div>
+         <form [formGroup]="angForm" novalidate class="w3-container">
             <div class="form__top">
-            <div class="form__left">
-               <div class="form__group">
-                  <input class="form__input form__input--name" type="text"   formControlName="name" placeholder="name" #name>
-               </div>
-               <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
-                  <div *ngIf="angForm.controls['name'].errors.required">
-                  Name is required.
+               <div class="form__left">
+                  <div class="form-container">
+                     <div class="form__group">
+                        <input class="form__input form__input--name" type="text" formControlName="name" placeholder="Your Name" #name>
+                     </div>
+                     <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                        <div *ngIf="angForm.controls['name'].errors.required">
+                        Name is required.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-container">
+                     <div class="form__group">
+                        <input class="form__input form__input--email" type="email" formControlName="email" placeholder="Your Email" #email>
+                     </div>
+                     <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="angForm.controls['message'].errors.required">
+                        Email is required.
+                        </div>
+                     </div>
                   </div>
                </div>
-               <div class="form__group">
-                  <input class="form__input form__input--email" type="email"  formControlName="email" placeholder="email" #email>
-               </div>
-               <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
-                  class="alert alert-danger">
-                  <div *ngIf="angForm.controls['message'].errors.required">
-                  message is required.
+               <div class="form__right">
+                  <div class="form__group">
+                     <textarea class="form__input form__input--textarea" placeholder="Your Message" formControlName="message"  #message
+                     rows="3"></textarea>
+                  </div>
+                  <div *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
+                     class="alert alert-danger">
+                     <div *ngIf="angForm.controls['message'].errors.required">
+                     message is required.
+                     </div>
                   </div>
                </div>
-            </div>
-            <div class="form__right">
-               <div class="form__group">
-                  <textarea class="form__input form__input--textarea" placeholder="Message" formControlName="message"  #message
-                  rows="3"></textarea>
-               </div>
-               <div *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
-                  class="alert alert-danger">
-                  <div *ngIf="angForm.controls['message'].errors.required">
-                  message is required.
-                  </div>
-               </div>
-            </div>
             </div>
             <flash-messages></flash-messages>
             <div class="form__down">
-            <div class="form__group">
-               <button (click)="sendMail(name.value, email.value, message.value)"  class="form__input form__input--submit" name="submit" type="button" value="SEND MESSAGE">SEND MESSAGE
-               </button>
+               <div class="form__group">
+                  <button (click)="sendMail(name.value, email.value, message.value)"  class="form__input form__input--submit" name="submit" type="button" value="SEND MESSAGE">SEND MESSAGE
+                  </button>
+               </div>
             </div>
-            </div>
-
          </form>
       </div><br /><br />
    </div>

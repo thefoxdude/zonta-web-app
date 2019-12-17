@@ -19,9 +19,11 @@ export class ContactUsComponent {
 
    createForm() {
       this.angForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      message: ['', Validators.required],
+         name: ['', Validators.required],
+         email: ['', Validators.required],
+         phone: [''],
+         subject: [''],
+         message: ['', Validators.required],
       });
    }
    // sendMail(name, email, message) {
@@ -32,11 +34,11 @@ export class ContactUsComponent {
    //    });
    // }
 
-   sendMail(name: string, email: string, message: string) {
+   sendMail(name: string, email: string, phone: string, subject: string, message: string) {
 
-      let url = `https://us-central1-zonta-web-app.cloudfunctions.net/httpEmail`
+      let url = `https://bel0tywt2a.execute-api.us-west-2.amazonaws.com/dev/email/send`
       let params: URLSearchParams = new URLSearchParams();
-      let headers = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'});
+      let headers = new HttpHeaders({'Content-Type': 'application/json'});
 
       // params.set('to', 'danielfox400@gmail.com');
       // params.set('from', email);
@@ -44,8 +46,11 @@ export class ContactUsComponent {
       // params.set('content', message);
 
       const data = {
-         toEmail: 'hello@jeffdelaney.me',
-         toName: 'Jeff Delaney'
+         email: email,
+         name: name,
+         phone: phone,
+         subject: subject,
+         content: message
       }
 
       this.http.post(url, data, { headers: headers })

@@ -45,5 +45,17 @@
       "location": "Nuckols Ranch",
       "contact": "Mickie Manning",
       "phone": "(123)-456-7890"
+   },
+   {
+      "id": "5",
+      "month": "JAN",
+      "day": "18",
+      "dayOfWeek": "Saturday",
+      "name": "Inland Empire Women’s March",
+      "detailDateTime": "Jan 18 @ 10 am - 12 pm",
+      "location": "Riverside County Historic Courthouse 4050 Main St, Riverside, CA",
+      "contact": "Debbie Waltzer",
+      "phone": "(951) 201-8702 text ok",
+      "flyer": "../../../../assets/images/Flyer Women's March 2020 one.gif"
    }
 ]
