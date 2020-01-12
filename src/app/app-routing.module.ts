@@ -7,6 +7,7 @@ import { BosomBuddiesComponent } from './components/club-services/bosom-buddies/
 import { ContactUsComponent } from './components/about-us/contact-us/contact-us.component';
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
+import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
 
 const routes: Routes = [
 
@@ -17,7 +18,8 @@ const routes: Routes = [
    { path: 'bosom-buddies', component: BosomBuddiesComponent },
    { path: 'contact-us', component: ContactUsComponent },
    { path: 'join-us', component: JoinUsComponent },
-   { path: 'united-nations', component: UnitedNationsComponent }
+   { path: 'united-nations', component: UnitedNationsComponent },
+   { path: 'zonta-says-no', component: ZontaSaysNoComponent }
 ];
 
 @NgModule({

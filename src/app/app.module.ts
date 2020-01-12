@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
+import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +30,8 @@ import { UnitedNationsComponent } from './components/advocacy/united-nations/uni
       BosomBuddiesComponent,
       ContactUsComponent,
       JoinUsComponent,
-      UnitedNationsComponent
+      UnitedNationsComponent,
+      ZontaSaysNoComponent
    ],
    imports: [
       BrowserModule,

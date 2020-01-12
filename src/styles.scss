@@ -549,3 +549,45 @@ body {
 .form-container {
    margin: 20px 0px;
 }
+
+.zonta-href-container {
+   background: #c2b8ac;
+   width: 90%;
+   margin: auto;
+   padding: 20px;
+   border-radius: 8px;
+   color: black;
+}
+
+.zonta-href-container:hover {
+   cursor: pointer;
+   background: #e6e2dd;
+   box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.zonta-a-container:hover {
+   color: black !important;
+}
+
+.zonta-image-quote {
+   border: 3px solid #8c2427;
+   text-align: center;
+   padding: 10px;
+   line-height: 1.1em;
+   width: 80%;
+   margin: auto;
+   margin-top: 10px;
+}
+
+.zonta-image-label {
+   margin-top: 10px;
+   text-align: center;
+}
+
+.zonta-image-label p {
+   margin-bottom: 2px;
+}
+
+.zonta-img-col {
+   width: 100%;
+}
