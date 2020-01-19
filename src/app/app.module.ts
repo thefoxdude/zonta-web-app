@@ -18,6 +18,7 @@ import { FormBuilder } from '@angular/forms';
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
+import { ERAComponent } from './components/advocacy/era/era.component';
 
 @NgModule({
    declarations: [
@@ -31,7 +32,8 @@ import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-
       ContactUsComponent,
       JoinUsComponent,
       UnitedNationsComponent,
-      ZontaSaysNoComponent
+      ZontaSaysNoComponent,
+      ERAComponent
    ],
    imports: [
       BrowserModule,

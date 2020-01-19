@@ -8,6 +8,7 @@ import { ContactUsComponent } from './components/about-us/contact-us/contact-us.
 import { JoinUsComponent } from './components/about-us/join-us/join-us.component';
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
+import { ERAComponent } from './components/advocacy/era/era.component';
 
 const routes: Routes = [
 
@@ -19,7 +20,9 @@ const routes: Routes = [
    { path: 'contact-us', component: ContactUsComponent },
    { path: 'join-us', component: JoinUsComponent },
    { path: 'united-nations', component: UnitedNationsComponent },
-   { path: 'zonta-says-no', component: ZontaSaysNoComponent }
+   { path: 'zonta-says-no', component: ZontaSaysNoComponent },
+   { path: 'era', component: ERAComponent }
+
 ];
 
 @NgModule({
