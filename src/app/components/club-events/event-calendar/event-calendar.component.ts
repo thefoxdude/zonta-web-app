@@ -14,10 +14,8 @@ export class EventCalendarComponent {
       this.eventIdToExpanded = {};
       this.events = this.eventService.getEvents();
       for (let event of this.events) {
-         
          this.eventIdToExpanded[event.id] = false;
       }
-      console.log(new Date('Mon Nov 11 2019 19:27'));
    }
 
    expand(id: number) {

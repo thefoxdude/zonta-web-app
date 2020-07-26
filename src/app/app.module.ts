@@ -19,6 +19,7 @@ import { JoinUsComponent } from './components/about-us/join-us/join-us.component
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
 import { ERAComponent } from './components/advocacy/era/era.component';
+import { EndChildMarriageComponent } from './components/advocacy/end-child-marriage/end-child-marriage.component';
 
 @NgModule({
    declarations: [
@@ -33,7 +34,8 @@ import { ERAComponent } from './components/advocacy/era/era.component';
       JoinUsComponent,
       UnitedNationsComponent,
       ZontaSaysNoComponent,
-      ERAComponent
+      ERAComponent,
+      EndChildMarriageComponent
    ],
    imports: [
       BrowserModule,

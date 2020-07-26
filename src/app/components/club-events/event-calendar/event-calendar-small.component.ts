@@ -16,10 +16,11 @@ export class EventCalendarSmallComponent {
       this.smallEvents = [];
       this.eventIdToExpanded = {};
       for (let i = 0; i < 2; i++) {
-         this.smallEvents.push(this.events[i]);
-         this.eventIdToExpanded[this.events[i].id] = false;
+         if (i < this.events.length) {
+            this.smallEvents.push(this.events[i]);
+            this.eventIdToExpanded[this.events[i].id] = false;
+         }  
       }
-      console.log(new Date('Mon Nov 11 2019 19:27'));
    }
 
    expand(id: number) {

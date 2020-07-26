@@ -16,7 +16,7 @@
             <p *ngIf="event.cost"><mdb-icon fas icon="dollar-sign"></mdb-icon> {{event.cost}}</p>
             <mdb-icon fas icon="comment" style="float: left; margin-right: 5px; position: relative; top: 4px;" *ngIf="event.details"></mdb-icon>
             <pre *ngIf="event.details">{{event.details}}</pre>
-            <img *ngIf="event.flyer" src={{event.flyer}}>
+            <img *ngIf="event.flyer" src={{event.flyer}} class="zonta-img-col">
          </div>
       </div>
    </li>

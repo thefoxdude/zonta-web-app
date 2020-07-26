@@ -1,61 +1,14 @@
 [
+   
    {
       "id": "1",
-      "month": "NOV",
-      "day": "12",
-      "dayOfWeek": "Tuesday",
-      "name": "Business Meeting",
-      "detailDateTime": "Nov 12 @ 12:00 pm – 1:00 pm",
-      "date": "Mon Nov 11 2019 19:27",
-      "location": "Rosa’s Italian Restaurant 949 West Henderson Avenue Porterville, CA 93257 USA",
-      "contact": "Test, Contact",
-      "phone": "(012)-345-6789",
-      "cost": "$12",
-      "flyer": "../../../../assets/images/2019-CHT-Flyer.png",
-      "details": "Test Details\nWith new line"
-   },
-   {
-      "id": "2",
-      "month": "DEC",
-      "day": "07",
+      "month": "MAR",
+      "day": "21",
       "dayOfWeek": "Saturday",
-      "name": "27th Annual Christmas Home Tour",
-      "detailDateTime": "Nov 7 @ 12:00 pm – 4:00 pm",
-      "location": "",
-      "contact": "Giovanna DePaoli",
-      "phone": "(123)-456-7890",
-      "flyer": "2019-CHT-Flyer.png"
-   },
-   {
-      "id": "3",
-      "month": "DEC",
-      "day": "10",
-      "dayOfWeek": "Tuesday",
-      "name": "Business Meeting",
-      "detailDateTime": "Nov 12 @ 12:00 pm – 1:00 pm",
-      "location": "Rosa’s Italian Restaurant 949 West Henderson Avenue Porterville, CA 93257 USA"
-   },
-   {
-      "id": "4",
-      "month": "DEC",
-      "day": "12",
-      "dayOfWeek": "Thursday",
-      "name": "Christmas Party @ Nuckols Ranch",
-      "detailDateTime": "Dec 12 @ 5:30 pm – 9:00 pm",
-      "location": "Nuckols Ranch",
-      "contact": "Mickie Manning",
-      "phone": "(123)-456-7890"
-   },
-   {
-      "id": "5",
-      "month": "JAN",
-      "day": "18",
-      "dayOfWeek": "Saturday",
-      "name": "Inland Empire Women’s March",
-      "detailDateTime": "Jan 18 @ 10 am - 12 pm",
-      "location": "Riverside County Historic Courthouse 4050 Main St, Riverside, CA",
-      "contact": "Debbie Waltzer",
-      "phone": "(951) 201-8702 text ok",
-      "flyer": "../../../../assets/images/Flyer Women's March 2020 one.gif"
+      "name": "LUNAFEST",
+      "detailDateTime": "March 21 @ 1:00 pm Doors open / 1:30 pm Film Screening",
+      "location": "The Box, Fox Performing Arts Center 3635 Market Street, Riverside, 2nd Floor",
+      "phone": "(951)-204-9976",
+      "flyer": "../../../../assets/Flyers/lunafest.jpg"
    }
 ]

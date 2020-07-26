@@ -9,6 +9,7 @@ import { JoinUsComponent } from './components/about-us/join-us/join-us.component
 import { UnitedNationsComponent } from './components/advocacy/united-nations/united-nations.component';
 import { ZontaSaysNoComponent } from './components/advocacy/zonta-says-no/zonta-says-no.component';
 import { ERAComponent } from './components/advocacy/era/era.component';
+import { EndChildMarriageComponent } from './components/advocacy/end-child-marriage/end-child-marriage.component';
 
 const routes: Routes = [
 
@@ -21,7 +22,8 @@ const routes: Routes = [
    { path: 'join-us', component: JoinUsComponent },
    { path: 'united-nations', component: UnitedNationsComponent },
    { path: 'zonta-says-no', component: ZontaSaysNoComponent },
-   { path: 'era', component: ERAComponent }
+   { path: 'era', component: ERAComponent },
+   { path: 'end-child-marriage', component: EndChildMarriageComponent }
 
 ];
 

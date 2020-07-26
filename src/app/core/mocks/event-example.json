@@ -1,0 +1,15 @@
+{
+   "id": "0",
+   "month": "NOV",
+   "day": "12",
+   "dayOfWeek": "Tuesday",
+   "name": "Business Meeting",
+   "detailDateTime": "Nov 12 @ 12:00 pm – 1:00 pm",
+   "date": "Mon Nov 11 2019 19:27",
+   "location": "Rosa’s Italian Restaurant 949 West Henderson Avenue Porterville, CA 93257 USA",
+   "contact": "Test, Contact",
+   "phone": "(012)-345-6789",
+   "cost": "$12",
+   "flyer": "../../../../assets/images/2019-CHT-Flyer.png",
+   "details": "Test Details\nWith new line"
+}
