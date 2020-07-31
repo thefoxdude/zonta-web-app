@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "zonta-sacramento-web-app"
+    "default": "zonta-web-app"
+  },
+  "targets": {
+    "zonta-web-app": {
+      "hosting": {
+        "sacramento": [
+          "zonta-sacramento-web-app"
+        ]
+      }
+    }
   }
 }
