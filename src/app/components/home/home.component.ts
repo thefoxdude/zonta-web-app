@@ -12,5 +12,13 @@ export class HomeComponent implements OnInit {
    ngOnInit() {
       
    }
+
+   showModal(show: boolean) {
+      if (show) {
+         (<HTMLElement> document.getElementById("pdfModal")).style.display = 'block';
+      } else {
+         (<HTMLElement> document.getElementById("pdfModal")).style.display = 'none';
+      }
+   }
   
 }
